@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HmmChk - AI-Powered Fact Checking</title>
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
     <style>
         * {
             margin: 0;
@@ -29,7 +30,8 @@
         }
 
         .logo {
-            font-size: 4rem;
+            width: 120px;
+            height: 120px;
             margin-bottom: 10px;
         }
 
@@ -123,7 +125,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">🔍</div>
+        <canvas id="rive-logo" class="logo"></canvas>
         <h1>HmmChk</h1>
         <p class="tagline">AI-Powered Fact Checking</p>
 
@@ -162,5 +164,14 @@
     <footer>
         © 2025 HmmChk
     </footer>
+
+    <script>
+        new rive.Rive({
+            src: 'hmmchkanimated.riv',
+            canvas: document.getElementById('rive-logo'),
+            autoplay: true,
+            fit: rive.Fit.Contain,
+        });
+    </script>
 </body>
 </html>
