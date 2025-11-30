@@ -30,8 +30,8 @@
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 150px;
             margin-bottom: 10px;
         }
 
@@ -166,11 +166,14 @@
     </footer>
 
     <script>
-        new rive.Rive({
+        const riveInstance = new rive.Rive({
             src: 'hmmchkanimated.riv',
             canvas: document.getElementById('rive-logo'),
             autoplay: true,
             fit: rive.Fit.Contain,
+            onLoad: () => {
+                riveInstance.setSpeed(0.5);
+            },
         });
     </script>
 </body>
