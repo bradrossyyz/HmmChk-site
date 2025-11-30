@@ -33,6 +33,9 @@
             width: 150px;
             height: 150px;
             margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
@@ -171,7 +174,8 @@
             canvas: document.getElementById('rive-logo'),
             autoplay: true,
             speed: 0.5,
-            fit: rive.Fit.Contain,
+            fit: rive.Fit.Cover,
+            alignment: rive.Alignment.Center,
         });
     </script>
 </body>
